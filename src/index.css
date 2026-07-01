@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --background: 210 40% 98%;
+    --foreground: 220 32% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 32% 12%;
+    --primary: 188 92% 32%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 44 88% 91%;
+    --secondary-foreground: 31 65% 23%;
+    --muted: 210 22% 93%;
+    --muted-foreground: 218 13% 41%;
+    --accent: 162 48% 90%;
+    --accent-foreground: 163 75% 19%;
+    --border: 214 22% 84%;
+    --input: 214 22% 84%;
+    --ring: 188 92% 32%;
+    --grid: 190 85% 36%;
+    --shadow: 205 35% 28%;
+    --radius: 0.5rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      --background: 220 32% 5%;
+      --foreground: 210 40% 96%;
+      --card: 220 25% 8%;
+      --card-foreground: 210 40% 96%;
+      --primary: 186 91% 52%;
+      --primary-foreground: 220 32% 5%;
+      --secondary: 42 76% 16%;
+      --secondary-foreground: 42 100% 84%;
+      --muted: 215 24% 15%;
+      --muted-foreground: 214 16% 72%;
+      --accent: 162 62% 14%;
+      --accent-foreground: 159 78% 81%;
+      --border: 215 20% 20%;
+      --input: 215 20% 20%;
+      --ring: 186 91% 52%;
+      --grid: 186 91% 52%;
+      --shadow: 190 92% 16%;
+    }
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-width: 320px;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background:
+      linear-gradient(to right, hsl(var(--grid) / 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--grid) / 0.08) 1px, transparent 1px),
+      hsl(var(--background));
+    background-size:
+      42px 42px,
+      42px 42px,
+      auto;
+    color: hsl(var(--foreground));
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    text-rendering: optimizeLegibility;
+  }
+
+  body::before {
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    content: "";
+    background:
+      linear-gradient(120deg, hsl(188 92% 48% / 0.12), transparent 32%),
+      linear-gradient(300deg, hsl(42 92% 54% / 0.12), transparent 34%),
+      linear-gradient(180deg, transparent, hsl(var(--background)) 72%);
+  }
+
+  body::after {
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    content: "";
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 6px,
+      hsl(var(--foreground) / 0.025) 7px
+    );
+    mix-blend-mode: multiply;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body::after {
+      mix-blend-mode: screen;
+    }
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .project-card-glow {
+    background:
+      linear-gradient(90deg, hsl(188 92% 48% / 0.4), hsl(42 92% 54% / 0.36), hsl(158 68% 46% / 0.32)),
+      hsl(var(--card));
+  }
+}
