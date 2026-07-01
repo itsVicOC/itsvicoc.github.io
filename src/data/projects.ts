@@ -10,6 +10,15 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    name: "twenty-four",
+    repoUrl: "https://github.com/itsVicOC/twenty-four",
+    description: "24 点速算竞技网页，支持每日正式赛、排行榜和本地练习模式。",
+    language: "TypeScript",
+    homepage: "https://itsvicoc.github.io/twenty-four/",
+    category: "竞技游戏",
+    createdAt: "2026-07-01",
+  },
+  {
     name: "primaryschoolmath",
     repoUrl: "https://github.com/itsVicOC/primaryschoolmath",
     description: "一个面向小学生的数学练习小游戏网站。",

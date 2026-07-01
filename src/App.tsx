@@ -42,6 +42,7 @@ const languageTone: Record<string, string> = {
 };
 
 const categoryIcon: Record<string, React.ComponentType<{ className?: string }>> = {
+  竞技游戏: Trophy,
   学习游戏: BookOpenCheck,
   益智游戏: Puzzle,
   创作工具: ImageIcon,
@@ -121,7 +122,7 @@ function Hero() {
           Project Index
         </h1>
         <p className="mt-5 max-w-2xl text-balance text-base leading-8 text-muted-foreground sm:text-lg">
-          一个面向 GitHub Pages 根域的项目控制台，收纳学习游戏、Canvas
+          一个面向 GitHub Pages 根域的项目控制台，收纳竞技游戏、Canvas
           作品、桌面工具、赛事小程序与主题实验。
         </p>
         <div className="mt-8 grid max-w-2xl grid-cols-1 gap-3 sm:grid-cols-3">
