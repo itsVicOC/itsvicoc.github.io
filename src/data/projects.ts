@@ -10,6 +10,33 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    name: "gridGame",
+    repoUrl: "https://github.com/itsVicOC/gridGame",
+    description: "纸径：带全球排行榜的每日路径拼图 React PWA",
+    language: "TypeScript",
+    homepage: "https://itsvicoc.github.io/gridGame/",
+    category: "益智游戏",
+    createdAt: "2026-07-14",
+  },
+  {
+    name: "mineSweeper",
+    repoUrl: "https://github.com/itsVicOC/mineSweeper",
+    description: "移动端优先的在线扫雷游戏，支持经过验证的排行榜。",
+    language: "TypeScript",
+    homepage: "https://itsvicoc.github.io/mineSweeper/",
+    category: "竞技游戏",
+    createdAt: "2026-07-13",
+  },
+  {
+    name: "Tetris-online",
+    repoUrl: "https://github.com/itsVicOC/Tetris-online",
+    description: "基于 Vite、TypeScript 和 Canvas 的响应式无尽方块游戏，支持 Supabase 排行榜。",
+    language: "TypeScript",
+    homepage: "https://itsvicoc.github.io/Tetris-online/",
+    category: "Canvas 游戏",
+    createdAt: "2026-07-12",
+  },
+  {
     name: "twenty-four",
     repoUrl: "https://github.com/itsVicOC/twenty-four",
     description: "24 点速算竞技网页，支持每日正式赛、排行榜和本地练习模式。",
