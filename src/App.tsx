@@ -46,6 +46,8 @@ const languageTone: Record<string, string> = {
   Swift: "bg-orange-500",
   Python: "bg-emerald-500",
   Vue: "bg-lime-500",
+  Rust: "bg-orange-700",
+  HTML: "bg-rose-500",
 };
 
 const categoryIcon: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -61,6 +63,9 @@ const categoryIcon: Record<string, React.ComponentType<{ className?: string }>> 
   主题设计: FileText,
   桌面工具: MonitorDown,
   图片工具: ImageIcon,
+  游戏辅助: Gamepad2,
+  "AI 工具": Cpu,
+  学习应用: BookOpenCheck,
 };
 
 const featuredProjects = projects.filter((project) => project.homepage);
